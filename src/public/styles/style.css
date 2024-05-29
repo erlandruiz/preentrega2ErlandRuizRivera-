@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+#products-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-display,
+.product-form,
+.add-product-form {
+    margin-bottom: 20px;
+}
+
+.product-display div,
+.product-form div,
+.add-product-form div {
+    margin-bottom: 10px;
+}
+
+.product-display label,
+.product-form label,
+.add-product-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-display span {
+    display: block;
+    padding: 8px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    word-wrap: break-word;
+}
+
+.product-form input[type="text"],
+.product-form input[type="number"],
+.product-form textarea,
+.add-product-form input[type="text"],
+.add-product-form input[type="number"],
+.add-product-form textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.product-form button,
+.add-product-form button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.product-display button.delete-button {
+    background-color: #dc3545;
+}
+
+.product-form button:hover,
+.add-product-form button:hover {
+    opacity: 0.9;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #products-container {
+        padding: 10px;
+    }
+
+    .product-display,
+    .product-form,
+    .add-product-form {
+        margin-bottom: 15px;
+    }
+
+    .product-display label,
+    .product-form label,
+    .add-product-form label {
+        font-size: 14px;
+    }
+
+    .product-display span,
+    .product-form input[type="text"],
+    .product-form input[type="number"],
+    .product-form textarea,
+    .add-product-form input[type="text"],
+    .add-product-form input[type="number"],
+    .add-product-form textarea {
+        padding: 6px;
+    }
+
+    .product-form button,
+    .add-product-form button {
+        padding: 8px 12px;
+        margin-right: 5px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-form button,
+    .add-product-form button {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .product-display label,
+    .product-form label,
+    .add-product-form label {
+        font-size: 12px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+}

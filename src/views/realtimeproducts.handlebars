@@ -1,0 +1,90 @@
+<h1>REALTIMEPRODUCTS</h1>
+
+<div id="products-container">
+
+  {{#each products}}
+   <div class="product-display" id="product-{{@index}}">
+    <h3>Producto{{@index}}</h3>
+    <div>
+        <label>ID:</label>
+        <span>{{id}}</span>
+    </div>
+    <div>
+        <label>Title:</label>
+        <span>{{title}}</span>
+    </div>
+    <div>
+        <label>Description:</label>
+        <span>{{description}}</span>
+    </div>
+    <div>
+        <label>Code:</label>
+        <span>{{code}}</span>
+    </div>
+    <div>
+        <label>Price:</label>
+        <span>{{price}}</span>
+    </div>
+    <div>
+        <label>Stock:</label>
+        <span>{{stock}}</span>
+    </div>
+    <div>
+        <label>Category:</label>
+        <span>{{category}}</span>
+    </div>
+    <div>
+        <label>Thumbnails:</label>
+        <span>{{thumbnails}}</span>
+    </div>
+    <button type="button" class="delete-button" data-index="{{@index}}">Eliminar Producto</button>
+</div>
+<hr>
+  {{/each}}
+
+
+<hr>
+
+
+
+</div>
+
+<h3>Agregar Nuevo Producto</h3>
+    <form class="add-product-form" id="add-product-form">
+       
+        <div>
+            <label for="new-title">Title:</label>
+            <input type="text" id="new-title" name="title">
+        </div>
+        <div>
+            <label for="new-description">Description:</label>
+            <textarea id="new-description" name="description"></textarea>
+        </div>
+        <div>
+            <label for="new-code">Code:</label>
+            <input type="text" id="new-code" name="code">
+        </div>
+        <div>
+            <label for="new-price">Price:</label>
+            <input type="number" id="new-price" name="price">
+        </div>
+        <div>
+            <label for="new-stock">Stock:</label>
+            <input type="number" id="new-stock" name="stock">
+        </div>
+        <div>
+            <label for="new-category">Category:</label>
+            <input type="text" id="new-category" name="category">
+        </div>
+        <div>
+            <label for="new-thumbnails">Thumbnails:</label>
+            <input type="text" id="new-thumbnails" name="thumbnails">
+        </div>
+        <button type="button" id="add-product-button">Agregar Producto</button>
+    </form>
+
+
+
+
+<script src="/socket.io/socket.io.js"></script>
+ <script type="module" src="/js/realtimeproducts.js"></script>
