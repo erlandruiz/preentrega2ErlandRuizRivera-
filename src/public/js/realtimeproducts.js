@@ -26,6 +26,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 });
 
+// Escuchar el evento de actualización de productos desde el servidor
+socket.on('updateProducts', (products) => {
+    renderProducts(products);
+});
+
+
+
 async function fetchAndRenderProducts() {
     try {
         const response = await fetch('/api/products');
@@ -75,7 +82,7 @@ async function addProduct() {
     const thumbnails = document.getElementById('new-thumbnails').value;
 
     const newProduct = {
-         title, description, code, price, stock, category, thumbnails
+        title, description, code, price, stock, category, thumbnails
         // id, title, description, code, price, stock, category, thumbnails
     };
 
@@ -99,5 +106,3 @@ async function deleteProduct(id) {
         console.error('Error deleting product:', error);
     }
 }
-
-

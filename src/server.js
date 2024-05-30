@@ -40,8 +40,10 @@ const httpServer =  app.listen(PORT,()=>{
     console.log(`SERVER IS RUNNING AT PORT NUMBER ${PORT}`)
 })
 
-console.clear()
+
 const socketServer = new Server(httpServer); //socket.io 2
+
+const io = new Server(socketServer);
 
 socketServer.on('connection',(socket)=>{
     console.log(`usuario conectado: ${socket.id}`);
@@ -56,3 +58,5 @@ socketServer.on('connection',(socket)=>{
         console.log(`Este mensaje es del cliente: ${msgClient}`)
     })
 })
+
+export {socketServer};
